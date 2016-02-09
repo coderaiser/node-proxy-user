@@ -1,6 +1,6 @@
 {
   "name": "proxy-user",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "proxy request according to username",
   "main": "lib/proxy-user.js",
   "dependencies": {
@@ -19,8 +19,8 @@
     "user",
     "proxy"
   ],
-  "engines" : {
-      "node" : ">=4"
+  "engines": {
+    "node": ">=4"
   },
   "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
   "license": "MIT"

@@ -1,0 +1,5 @@
+2016.02.09, v1.0.1
+
+fix:
+- (package) http-proxy-user -> http-proxy
+
