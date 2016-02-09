@@ -43,11 +43,6 @@ Proxy socket requests.
 proxy.socket({
     port: 80 // default
     target: 'localhost', // default
-    
-    user: {
-        username: 'coderaiser',
-        password: 'hello'
-    },
 })
 ```
 
@@ -61,17 +56,11 @@ let http    = require('http'),
 
 const PORT = 31337;
 
-const user = {
-    username: 'coderaiser',
-    password: 'hello'
-}
-
-server.on('upgrade', proxy.socket({
-    user: user
-});
+server.on('upgrade', proxy.socket();
 
 app.use(proxyUser.web({
-    user: user
+    username: 'coderaiser',
+    password: 'hello'
 });
 
 server.listen(PORT, () => {
