@@ -23,8 +23,8 @@ Proxy http requests.
 ```js
 proxyUser.web({
     logout: req => console.log('logout'),
-    port: 80, // default
-    target: 'localhost', // default
+    port: 80,           // default
+    target: 'localhost',// default
     user: {
         username: 'coderaiser',
         password: 'hello'
@@ -41,8 +41,8 @@ Proxy socket requests.
 
 ```js
 proxy.socket({
-    port: 80 // default
-    target: 'localhost', // default
+    port: 80            // default
+    target: 'localhost',// default
 })
 ```
 
