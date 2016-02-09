@@ -56,7 +56,7 @@ let http    = require('http'),
 
 const PORT = 31337;
 
-server.on('upgrade', proxy.socket();
+server.on('upgrade', proxy.socket());
 
 app.use(proxyUser.web({
     username: 'coderaiser',
