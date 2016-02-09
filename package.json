@@ -1,0 +1,27 @@
+{
+  "name": "proxy-user",
+  "version": "1.0.0",
+  "description": "proxy request according to username",
+  "main": "lib/proxy-user.js",
+  "dependencies": {
+    "http-proxy-user": "^1.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/node-proxy-user.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "proxy-user",
+    "user",
+    "proxy"
+  ],
+  "engines" : {
+      "node" : ">=4"
+  },
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT"
+}
