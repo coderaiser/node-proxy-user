@@ -56,7 +56,12 @@ let http    = require('http'),
 
 const PORT = 31337;
 
-server.on('upgrade', proxy.socket());
+let socket = proxy.socket()
+    .on('error', (error) => {
+        console.error(error.message);
+    })
+
+server.on('upgrade', socket);
 
 app.use(proxyUser.web({
     username: 'coderaiser',
