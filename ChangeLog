@@ -1,3 +1,9 @@
+2016.03.21, v1.1.1
+
+feature:
+- (proxy-user) add error handling
+
+
 2016.02.18, v1.1.0
 
 feature:
