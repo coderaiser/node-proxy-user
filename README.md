@@ -9,7 +9,7 @@ Proxy requests according to username.
 ## API
 
 ```js
-let proxyUser = require('proxy-user');
+const proxyUser = require('proxy-user');
 ```
 
 ### proxyUser.web(options)
@@ -50,13 +50,13 @@ proxy.socket({
 `proxy-user` could be used as [express](http://expressjs.com) middleware.
 
 ```js
-let http    = require('http'),
-    app     = require('express')(),
-    server  = http.createServer(app);
+const http = require('http');
+const app = require('express')();
+const server = http.createServer(app);
 
 const PORT = 31337;
 
-let socket = proxy.socket()
+const socket = proxy.socket()
     .on('error', (error) => {
         console.error(error.message);
     })
@@ -76,3 +76,4 @@ server.listen(PORT, () => {
 ## License
 
 MIT
+
