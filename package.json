@@ -1,6 +1,7 @@
 {
   "name": "proxy-user",
   "version": "1.1.3",
+  "type": "module",
   "description": "proxy request according to username",
   "main": "lib/proxy-user.js",
   "dependencies": {
@@ -8,11 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/coderaiser/node-proxy-user.git"
+    "url": "git+https://github.com/coderaiser/node-proxy-user.git"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "madrun": "^13.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "madrun test",
+    "watch:test": "madrun watch:test",
+    "lint": "madrun lint",
+    "fresh:lint": "madrun fresh:lint",
+    "lint:fresh": "madrun lint:fresh",
+    "fix:lint": "madrun fix:lint",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "keywords": [
     "proxy-user",

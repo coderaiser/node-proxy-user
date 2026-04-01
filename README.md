@@ -13,8 +13,10 @@ const proxyUser = require('proxy-user');
 ```
 
 ### proxyUser.web(options)
+
 Proxy http requests.
 `options` could contain:
+
 - `logout` function on `/[username]/logout`
 - `port` to redirect to
 - `user` data (`username`, `password`)
@@ -22,51 +24,58 @@ Proxy http requests.
 
 ```js
 proxyUser.web({
-    logout: req => console.log('logout'),
-    port: 80,           // default
-    target: 'localhost',// default
+    logout: (req) => console.log('logout'),
+    port: 80, // default
+    target: 'localhost', // default
     user: {
         username: 'coderaiser',
-        password: 'hello'
-    }
+        password: 'hello',
+    },
 });
 ```
 
 ### proxyUser.web(options)
+
 Proxy socket requests.
 `options` could contain:
+
 - `port` to redirect to
 - `user` data (`username`, `password`)
 - `target` url to redirect to
 
 ```js
 proxy.socket({
-    port: 80            // default
-    target: 'localhost',// default
-})
+    port: 80, // default
+    target: 'localhost',
+} // default
+);
 ```
 
 ## Example
+
 `proxy-user` could be used as [express](http://expressjs.com) middleware.
 
 ```js
-const http = require('http');
-const app = require('express')();
+import http from 'node:http';
+import express from 'express';
+
+const app = express();
 const server = http.createServer(app);
 
-const PORT = 31337;
+const PORT = 31_337;
 
-const socket = proxy.socket()
+const socket = proxy
+    .socket()
     .on('error', (error) => {
-        console.error(error.message);
-    })
+    console.error(error.message);
+});
 
 server.on('upgrade', socket);
 
 app.use(proxyUser.web({
     username: 'coderaiser',
-    password: 'hello'
-});
+    password: 'hello',
+}));
 
 server.listen(PORT, () => {
     console.log('url: http://%s:%d', 'localhost', PORT);
@@ -76,4 +85,3 @@ server.listen(PORT, () => {
 ## License
 
 MIT
-
