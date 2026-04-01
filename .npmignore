@@ -1,0 +1,10 @@
+*.config.*
+*.log
+*.loc
+
+.*
+
+eslint.config.*
+
+test
+coverage
