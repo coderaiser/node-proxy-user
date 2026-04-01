@@ -1,3 +1,10 @@
+2026.04.01, v2.0.0
+
+feature:
+- bbe19c5 proxy-user: http-proxy -> http-proxy-node16
+- c460c9a proxy-user: migrate to ESM
+- dd73057 proxy-user: drop support of node < 22
+
 2017.05.30, v1.1.3
 
 feature:
